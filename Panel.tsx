@@ -47,6 +47,17 @@ export const Panel: React.FC<PanelProps> = ({ face, allFaces, onChoice, onOpenBo
                 </div>
             )}
 
+            {/* Back Cover - The End Overlay */}
+            {isBackCover && (
+                <div className="absolute top-[20%] inset-x-0 z-20 flex justify-center pointer-events-none">
+                     <div className="bg-white/80 backdrop-blur-md px-12 py-6 rounded-full shadow-[0_10px_40px_rgba(0,0,0,0.15)] border-4 border-white transform -rotate-2">
+                        <h1 className="font-story text-6xl text-purple-600 font-bold tracking-wider drop-shadow-sm">
+                            The End!
+                        </h1>
+                     </div>
+                </div>
+            )}
+
             {/* Decision Buttons - Integrated nicely */}
             {face.isDecisionPage && face.choices.length > 0 && (
                 <div className={`absolute top-0 inset-0 z-40 bg-black/40 backdrop-blur-[2px] flex flex-col items-center justify-center p-8 transition-opacity duration-500 ${face.resolvedChoice ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>

@@ -111,7 +111,7 @@ const App: React.FC = () => {
     const lenLimit = richMode ? "3-4 sentences, descriptive" : "1-2 simple sentences";
 
     const prompt = `
-You are a world-class children's book author writing a story for kids (age 3-8).
+You are a world-class children's book author writing a story for kids (age 3-10).
 PAGE ${pageNum} of ${MAX_STORY_PAGES}.
 TARGET LANGUAGE: ${langName}.
 ${coreDriver}
